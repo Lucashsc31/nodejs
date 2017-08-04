@@ -1,0 +1,27 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "Brincando com NodeJS",
+  "main": "pagina.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucashsc31/nodejs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "fiap",
+    "2tinr"
+  ],
+  "author": "Lucas Henrique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucashsc31/nodejs/issues"
+  },
+  "homepage": "https://github.com/Lucashsc31/nodejs#readme",
+  "devDependencies": {
+    "express": "^4.15.3"
+  }
+}
