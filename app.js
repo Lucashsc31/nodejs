@@ -1,6 +1,8 @@
 var express = require("express");
 var app = express();
 
+var mensagem= require("./modulo_teste");
+
 //A engine de view sera EJS, e para setarmos isso na propriedade node
 app.set('view engine', 'ejs');
 
