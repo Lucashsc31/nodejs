@@ -6,7 +6,8 @@ var app = server.app;
 var routeHome = require("./app/routes/home")(app);
 var routeProdutos = require("./app/routes/produtos")(app);
 var routeCadastrar = require("./app/routes/cadastrar")(app);
+var routeClientes = require("./app/routes/clientes")(app);
 
 app.listen(server.port, function(){
-    console.log("Server Ativo");
+    console.log("Server ON");
 });
