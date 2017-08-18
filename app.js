@@ -1,5 +1,5 @@
 //var modulo_teste = require("./modulo_teste")();
-var server = require("./config/server")("ejs", 3000, "./app/views");
+var server = require("./config/server")("ejs", 3000, "./app/views", "config/dbConnection.js");
 var app = server.app;
 
 //ROUTES
