@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Lucashsc31/nodejs#readme",
   "devDependencies": {
+    "body-parser": "^1.17.2",
     "consign": "^0.1.6",
     "ejs": "^2.5.7",
     "express": "^4.15.3",

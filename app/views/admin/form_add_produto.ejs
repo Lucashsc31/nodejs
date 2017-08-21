@@ -6,9 +6,9 @@
     </head>
     <body>
         <h2>Adicionar Produto</h2><br>
-        <form action="" method="post">
-            Nome: <input type="text" placeholder="Nome"/><br><br>
-            Quantidade: <input type="text" placeholder="Quantidade"/>
+        <form action="produtos/salvar" method="post">
+            Nome: <input type="text" name="nome" placeholder="Nome"/><br><br>
+            Descricão: <input type="text" name="descricao" placeholder="Descricão"/>
             <input type="submit" value="Cadastrar"/>
         </form>
     </body>
