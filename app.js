@@ -1,13 +1,4 @@
-//var modulo_teste = require("./modulo_teste")();
-var server = require("./config/server")("ejs", 3000, "./app/views", "config/dbConnection.js");
-var app = server.app;
-
-//ROUTES
-var routeHome = require("./app/routes/home")(app);
-var routeProdutos = require("./app/routes/produtos")(app);
-var routeCadastrar = require("./app/routes/cadastrar")(app);
-var routeClientes = require("./app/routes/clientes")(app);
-
-app.listen(server.port, function(){
-    console.log("Server ON");
+var app = require('./config/server');
+app.listen(3000, function(){
+    console.log('Server ON');
 });

@@ -1,9 +1,16 @@
-var mysql = require("mysql");
-module.exports = function(){
-    return mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'fiap',
-        database: 'sistema_produtos'
-    });
+var mysql = require('mysql');
+var conecMySQL = function(){
+    console.log('Conexão estabelecida');
+        return mysql.createConnection(
+        {
+            host : 'localhost',
+            user : 'root',
+            password : 'fiap',
+            database : 'sistema_produtos'
+        }
+    );
 }
+
+module.exports = function(){ // abre funcao
+    return conecMySQL;
+} // fecha funcao

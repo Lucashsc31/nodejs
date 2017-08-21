@@ -1,17 +1,16 @@
-module.exports = function(_viewEngine, _port, _views, _database){
-    this.app = require("express")();
-    this.consign = require("consign");
+var express = require('express');
+var consign = require('consign');
 
-    //A engine de view sera EJS, e para setarmos isso na propriedade node
-    this.viewEngine = _viewEngine;
-    this.views = _views;
-    this.port = _port;
-    this.database = _database;
-    this.app.set('views', this.views);
-    this.app.set('view engine', this.viewEngine);
+var app = express();
+//var mensagem = require('./modulo_teste');
+// A engine de view mudou. Será  EJS e para setarmos isso na propriedade do node
+// iremos utilizar:
+app.set('view engine', 'ejs');
+app.set('views', './app/views');
 
-    //Executa consign
-    this.consign().include("app/routes").then(this.database).into(this.app);
+consign()
+.include('app/routes')
+.then('config/dbConnection.js')
+.into(app);
 
-    return this;
-}
+module.exports = app;
