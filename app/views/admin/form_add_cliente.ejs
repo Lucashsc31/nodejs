@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Formulário de cadastro de clientes</title>
+		</head>
+	<body>
+
+		<h1>Adicionar cliente</h1>
+
+		<form action="/clientes/salvar" method="post">
+            <div>
+            <label>Nome</label>
+            <input type="text" name="nome">
+            </div>
+
+            <div>
+            <label>Sobrenome</label>
+            <input type="text" name="sobrenome">
+            </div>
+
+						<div>
+						<label>CEP</label>
+						<input type="text" name="cep">
+						</div>
+
+						<div>
+						<label>Endereço</label>
+						<input type="text" name="endereco">
+						</div>
+
+						<div>
+						<label>CPF</label>
+						<input type="text" name="cpf">
+						</div>
+
+            <input type="submit" value="Cadastrar">
+    </form>
+
+	</body>
+</html>

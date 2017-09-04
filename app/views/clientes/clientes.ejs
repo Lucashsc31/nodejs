@@ -1,38 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Produtos</title>
-    </head>
-    <body>
-        <h2>Produtos</h2>
-        <table border="1">
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Sobrenome</th>
-                <th>CEP</th>
-                <th>Endereço</th>
-                <th>CPF</th>
-            </tr>
-            
-            <% 
-                for(i = 0; i < clientes.length; i++){
-            %>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Lista de Produtos</title>
+		</head>
+	<body>
 
-                    <tr>
-                        <td><%=clientes[i].id_clientes%></td>
-                        <td><%=clientes[i].nome%></td>
-                        <td><%=clientes[i].sobrenome%></td>
-                        <td><%=clientes[i].cep%></td>
-                        <td><%=clientes[i].endereco%></td>
-                        <td><%=clientes[i].cpf%></td>
-                    </tr>                
+		<h1>Produtos</h1>
 
-            <% 
-                }
-            %>
+				<table>
+						<tr>
+								<td>ID</td>
+								<td>Nome</td>
+								<td>Sobrenome</td>
+                	<td>CEP</td>
+                  	<td>Endereço</td>
+                    	<td>CPF</td>
 
-        </table>
-    </body>
+						</tr>
+
+
+						<%  for(var i=0; i < clientes.length; i++) {  %>
+
+						<tr>
+							<td><%= clientes[i].id_clientes %></td>
+              <td><%= clientes[i].nome %></td>
+              <td><%= clientes[i].sobrenome %></td>
+              <td><%= clientes[i].cep %></td>
+              <td><%= clientes[i].endereco %></td>
+              <td><%= clientes[i].cpf %></td>
+						</tr>
+
+						<% } %>
+
+				</table>
+
+
+	</body>
 </html>

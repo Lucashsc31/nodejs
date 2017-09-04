@@ -1,9 +1,18 @@
+//var dbConnection = require('../../config/dbConnection');
+
 module.exports = function(app){
-    //var connection = dbConnection();
-    app.get('/clientes', function (req,res) {
-        var connection = app.config.dbConnection();
-        connection.query('SELECT * FROM clientes', function (error, result) {
-            res.render('clientes/clientes', {clientes: result});
-        });
-    });
+
+//var connection = dbConnection();
+
+app.get('/clientes', function (req,res) {
+
+var connection = app.config.dbConnection();
+var clientesModel = new app.app.models.clientesModel(connection);
+
+clientesModel.getClientes(connection, function (error, result) {
+  res.render('clientes/clientes', {clientes: result});
+  });
+    
+});
+
 }
