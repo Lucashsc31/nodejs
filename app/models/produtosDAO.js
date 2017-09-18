@@ -1,4 +1,4 @@
-function ProdutosDAO(connection){
+function ProdutosDAO(connection) {
   this._connection = connection;
 }
 
@@ -15,5 +15,5 @@ ProdutosDAO.prototype.salvarProduto = function(produto, callback) {
 }
 
 module.exports = function(){
-  return Produtos;
+    return ProdutosDAO;
 }

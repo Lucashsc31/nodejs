@@ -8,7 +8,7 @@ app.post('/produtos/salvar', function(req, res) {
   var produto = req.body;
 // função para salvar
 var connection = app.config.dbConnection();
-var produtosModel = new app.app.models.produtosDAO(connection);
+var produtosModel = new app.app.models.ProdutosDAO(connection);
 
   produtosModel.salvarProduto(produto, function(error, result){
     //res.render('produtos/produtos', {produtos : result });

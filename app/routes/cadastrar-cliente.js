@@ -10,10 +10,10 @@ module.exports = function(app) {
   // Conexao
   // Model
    var connection = app.config.dbConnection();
-   var clientesModel = new app.app.models.clientesModel(connection);
+   var clientesModel = new app.app.models.ClientesDAO(connection);
 
   // FUNÇÃO DE INSERT
-  clientesModel.salvarCliente(cliente, connection, function(error, result) {
+  clientesModel.salvarCliente(cliente, function(error, result) {
     res.redirect('/clientes');
   });
 

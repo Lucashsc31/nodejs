@@ -1,9 +1,8 @@
 function ClientesDAO(connection){
-  this._connection = connection
+  this._connection = connection;
 }
-
 ClientesDAO.prototype.getClientes = function(callback){
-  this._connection.query('SELECT * FROM clientes', callback);
+this._connection.query('SELECT * FROM clientes', callback);
 }
 
 ClientesDAO.prototype.salvarCliente = function(cliente, callback){
@@ -11,5 +10,7 @@ ClientesDAO.prototype.salvarCliente = function(cliente, callback){
 }
 
 module.exports = function() {
-  return Clientes;
+
+  return ClientesDAO;
+
 }

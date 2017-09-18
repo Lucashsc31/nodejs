@@ -1,4 +1,4 @@
 module.exports = function(){
-    this.mensagem = "Dentro deste modulo temos uma variavel do tipo String";
-    return this;
-};
+  var mensagem = "Dentro deste módulo temos uma variável do tipo String";
+  return mensagem;
+}
