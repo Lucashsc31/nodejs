@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-	<html lang="pt-br">
-		<head>
-			<meta charset="utf-8"/>
-			<title>Formulário de cadastro de produtos</title>
-		</head>
-	<body>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Formulário de cadastro de produtos</title>
+    </head>
+    <body>
 
 		<h1>Adicionar produto</h1>
+        
+        <br>
 
-		<form action="produtos/salvar" method="post">
+        <% if(validacao){ %>
+            <ul>
+                <% for(var i = 0; i < validacao.length; i++){ %>
+                    <li><%= validacao[i].msg%></li>
+                <% } %>
+            </ul>
+        <% } %>
+
+		<form action="/produtos/salvar" method="post">
             <div>
-            <label>Nome</label>
-            <input type="text" name="nome">
+                <label>Nome</label>
+                <input type="text" name="nome" value="<%= produto.nome %>">
             </div>
 
             <div>
-            <label>Descrição</label>
-            <input type="text" name="descricao">
+                <label>Descrição</label>
+                <input type="text" name="descricao" value="<%= produto.descricao %>">
             </div>
 
             <input type="submit" value="Cadastrar">
